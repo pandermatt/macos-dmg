@@ -7,7 +7,10 @@ unless system('which create-dmg > /dev/null')
   system('brew install create-dmg')
 end
 
-name = 'test'
+puts '>> Enter dmg Name'
+name = gets.chomp
+
+
 
 system(%(create-dmg \
 --volname "#{name} Installer" \
